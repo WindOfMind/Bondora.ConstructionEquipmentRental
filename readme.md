@@ -2,7 +2,7 @@
 
 The solution is a self-service system for renting construction equipment.
 Solution is implemented as a two-tier system: a web front-end (ASP.NET Core service and Angular SPA as a client app), and a separate backend service handling the business logic (console application).
-Inter-services communication is based on NServiceBus that allows to use any transport layer (RabbitMQ, MSMQ, Azure Service Bus and so on).
+Inter-services communication is based on NServiceBus that allows to use any transport layer (RabbitMQ, MSMQ, Azure Service Bus and so on). Using a messaged-based approach provides the possibility to accommodate growth and be scalable.
 
 Backend service (ConstructionEquipmentRental.Billing) contains handlers that process all input commands and generate invoices.
 
@@ -29,7 +29,7 @@ What things you need to run the software:
 1. Install Visual Studio, .NET Core SDK and Node.js.
 2. Make sure that the port 5000 is free.
 3. Open the solution in Visual Studio.
-4. Make sure that multiple startup projects is chosen otherwise set multiple start for Billing and Service projects.
+4. Make sure that multiple startup projects is chosen otherwise set multiple start for ConstructionEquipmentRental.Billing and ConstructionEquipmentRental.Service projects.
 5. Restore packages, build and run. 
 6. Restoring dependencies using 'npm' may take several minutes.
 
