@@ -10,7 +10,7 @@ namespace Bondora.ConstructionEquipmentRental.Billing
     {
         static async Task Main(string[] args)
         {
-            Console.Title = "Billing";
+            Console.Title = "ConstructionEquipmentRental.Billing";
 
             var endpointConfiguration = new EndpointConfiguration("Bondora.ConstructionEquipmentRental.Billing");
 

@@ -31,6 +31,7 @@ What things you need to run the software:
 3. Open the solution in Visual Studio.
 4. Make sure that multiple startup projects is chosen otherwise set multiple start for Billing and Service projects.
 5. Restore packages, build and run. 
+6. Restoring dependencies using 'npm' may take several minutes.
 
 ### Running the tests
 
