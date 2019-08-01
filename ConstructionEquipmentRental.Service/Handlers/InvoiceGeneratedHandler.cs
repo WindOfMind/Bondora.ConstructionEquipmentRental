@@ -21,9 +21,9 @@ namespace Bondora.ConstructionEquipmentRental.Service.Handlers
         {
             Log.Info($"Service has received InvoiceGenerated, ClientId = {message.ClientId}");
 
-            // For demonstration purposes we can assume that we have on;y one user so we can simply use sending all.
-            // But in real cases it's better to get the user id from token or provide connection id to the controller (from the client).
-            //  _invoicesHubContext.Clients.Client(message.ClientId).SendAsync("invoiceGenerated", content);
+            // For demonstration purposes we can assume that we have only one user so we can simply use sending all.
+            // But in the real cases it's better to get the user id from token or provide connection id to the controller (from the client).
+            //  _invoicesHubContext.Clients.Client(message.ClientId).SendAsync("invoiceGenerated", message.Invoice);
             await _invoicesHubContext.Clients.All.SendAsync("InvoiceGenerated", message.Invoice);
 
             Log.Info($"Invoice has been sent to ClientId = {message.ClientId}");
