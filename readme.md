@@ -3,9 +3,14 @@
 The solution is a self-service system for renting construction equipment.
 Solution is implemented as a two-tier system: a web front-end (ASP.NET Core service and Angular SPA as a client app), and a separate backend service handling the business logic (console application).
 Inter-services communication is based on NServiceBus that allows to use any transport layer (RabbitMQ, MSMQ, Azure Service Bus and so on).
+
 Backend service (ConstructionEquipmentRental.Billing) contains handlers that process all input commands and generate invoices.
+
 Frontend service (ConstructionEquipmentRental.Service) receive requests from client app for getting an invoice and push commands to NServiceBus. Once the invoice is generated NServiceBus will send it to the frontend service. After that using SignalR hub the frontend service push the invoice to the client app.
+
 Client app is Angular SPA with several components, services and a equipment state (NgRx). All equipment data is stored and operated via state and store that allow to keep the code as performant, consistent.
+
+Class and interaction diagram: https://github.com/WindOfMind/Bondora.ConstructionEquipmentRental/blob/master/ConstructionEquipmentRentalDiagram.pdf
 
 ## Getting Started
 
