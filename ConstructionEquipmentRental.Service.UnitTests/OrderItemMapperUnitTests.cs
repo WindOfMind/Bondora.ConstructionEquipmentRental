@@ -8,7 +8,7 @@ using FluentAssertions;
 using NSubstitute;
 using Xunit;
 
-namespace ConstructionEquipmentRental.Service.UnitTests
+namespace Bondora.ConstructionEquipmentRental.Service.UnitTests
 {
     public class OrderItemMapperUnitTests
     {

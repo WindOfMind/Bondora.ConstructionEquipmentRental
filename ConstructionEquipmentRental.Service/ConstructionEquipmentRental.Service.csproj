@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <RootNamespace>Bondora.ConstructionEquipmentRental.Service</RootNamespace>
     <AssemblyName>Bondora.ConstructionEquipmentRental.Service</AssemblyName>
+    <LangVersion>7.3</LangVersion>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <IsPackable>false</IsPackable>

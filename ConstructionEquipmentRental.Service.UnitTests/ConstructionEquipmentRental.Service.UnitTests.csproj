@@ -1,8 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-
+    <RootNamespace>Bondora.ConstructionEquipmentRental.Service.UnitTests</RootNamespace>
+    <AssemblyName>Bondora.ConstructionEquipmentRental.Service.UnitTests</AssemblyName>
+    <LangVersion>7.3</LangVersion>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
