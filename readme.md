@@ -6,7 +6,7 @@ Inter-services communication is based on NServiceBus that allows to use any tran
 
 Backend service (ConstructionEquipmentRental.Billing) contains handlers that process all input commands and generate invoices.
 
-Frontend service (ConstructionEquipmentRental.Service) receive requests from client app for getting an invoice and push commands to NServiceBus. Once the invoice is generated NServiceBus will send it to the frontend service. After that using SignalR hub the frontend service push the invoice to the client app.
+Frontend service (ConstructionEquipmentRental.Service) receives requests from client app for an invoice and pushes commands to NServiceBus. Once the invoice is generated NServiceBus will send it to the frontend service. After that the frontend service pushes the invoice to the client app using the SignalR hub .
 
 Client app is Angular SPA with several components, services and a equipment state (NgRx). All equipment data is stored and operated via state and store that allow to keep the code as performant, consistent.
 
