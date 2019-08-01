@@ -1,0 +1,21 @@
+.content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+}
+
+.equipment {
+  display: flex;
+  flex: 0.7;
+  min-width: 500px;
+  height: 100%;
+}
+
+.cart {
+  display: flex;
+  flex: 0.3;
+  min-width: 300px;
+  height: 100%;
+}

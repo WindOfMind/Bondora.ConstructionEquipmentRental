@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Bondora.ConstructionEquipmentRental.Messages</RootNamespace>
+    <AssemblyName>Bondora.ConstructionEquipmentRental.Messages</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NServiceBus" Version="7.1.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConstructionEquipmentRental.Domain\ConstructionEquipmentRental.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+<div class="header">
+  <h2>Cart</h2>
+  <button class="button"
+    type="button"
+    [disabled]="disabled"
+    (click)="onGetInvoiceButtonClicked()">
+    <i class="material-icons">shopping_cart</i>Get invoice
+  </button>
+</div>
+<div class="cart-item" *ngFor="let cartItem of cartItems; let i = index">
+  {{i + 1}}. {{cartItem.name}} {{cartItem.rentalDays}} days
+</div>

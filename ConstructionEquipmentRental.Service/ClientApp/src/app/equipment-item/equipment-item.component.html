@@ -1,0 +1,9 @@
+<form #machineForm="ngForm" (ngSubmit)="onClickAddToCart(rentalDaysCountInput.value)">
+  <div><h3>{{name}}</h3></div>
+  <div>
+    Rent it for: <input #rentalDaysCountInput type="number" min="1" max="365" required /> days
+    <input class="button" type="submit" value="Add to Cart" />
+  </div>
+</form>
+
+

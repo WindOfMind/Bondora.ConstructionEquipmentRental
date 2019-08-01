@@ -1,0 +1,18 @@
+<div style="text-align:center">
+  <h1>
+    Bondora Construction Equipment Rental
+  </h1>
+</div>
+
+<div class="content">
+  <div class="equipment">
+    <app-equipment-list [names]="names$ | async"></app-equipment-list>
+  </div>
+
+  <div class="cart">
+    <app-equipment-cart [cartItems]="cartItems$ | async"></app-equipment-cart>
+  </div>
+</div>
+
+
+
