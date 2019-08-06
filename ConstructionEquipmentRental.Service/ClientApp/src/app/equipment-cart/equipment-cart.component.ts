@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { CartItem } from '../models/cart-item';
-import { InvoiceService } from '../data-services/invoice.service';
 import { first } from 'rxjs/operators';
+import { InvoiceService } from '../data-services/invoice.service';
+import { CartItem } from '../models/cart-item';
 
 @Component({
   selector: 'app-equipment-cart',
@@ -11,7 +11,7 @@ import { first } from 'rxjs/operators';
 export class EquipmentCartComponent {
   @Input() cartItems: CartItem[];
 
-  private downloadingInvoice = false;
+  downloadingInvoice = false;
 
   constructor(private invoiceService: InvoiceService) { }
 

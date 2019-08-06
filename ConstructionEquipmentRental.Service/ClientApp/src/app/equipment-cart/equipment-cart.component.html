@@ -3,8 +3,10 @@
   <button class="button"
     type="button"
     [disabled]="disabled"
+    [class.primary-spinner]="downloadingInvoice"
     (click)="onGetInvoiceButtonClicked()">
-    <i class="material-icons">shopping_cart</i>Get invoice
+    <mat-icon *ngIf="downloadingInvoice" class="spinner" svgIcon="spinner"></mat-icon>
+    <span [class.hidden]="downloadingInvoice" i18n="@@GetInvoice"><i class="material-icons">shopping_cart</i>Get invoice</span>
   </button>
 </div>
 <div class="cart-item" *ngFor="let cartItem of cartItems; let i = index">

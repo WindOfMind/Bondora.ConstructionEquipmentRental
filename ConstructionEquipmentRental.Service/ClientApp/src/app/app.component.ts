@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { State } from './state/equipment.reducer';
 import * as equipmentActions from './state/equipment.actions';
-import { getMachineNames, getCartItems } from './state/equipment.selector';
+import { State } from './state/equipment.reducer';
+import { getCartItems, getMachineNames } from './state/equipment.selector';
 
 @Component({
   selector: 'app-root',

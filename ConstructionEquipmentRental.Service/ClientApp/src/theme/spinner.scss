@@ -1,0 +1,40 @@
+$mat-icon-color: #1976d2;
+
+@keyframes spin {
+  0% {
+    stroke-dashoffset: 165;
+    transform: rotate(180deg);
+  }
+
+  20% {
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(1080deg);
+  }
+
+  75% {
+    stroke-dashoffset: 165;
+    transform: rotate(540deg);
+  }
+}
+
+.mat-icon.spinner {
+  line-height: 0;
+  stroke: $mat-icon-color;
+
+  .spinner-path {
+    stroke-width: 6px;
+    fill: none;
+    stroke-dasharray: 165;
+    stroke-dashoffset: 165;
+    transform-origin: 38px 38px;
+    animation-name: spin;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform: rotate(180deg);
+  }
+}

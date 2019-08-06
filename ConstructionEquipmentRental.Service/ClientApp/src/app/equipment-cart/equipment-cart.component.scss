@@ -4,27 +4,17 @@
   flex-direction: column;
 }
 
-.button, button {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 16px;
+button {
   margin-right: 10px;
-  border-radius: 2px;
-  font-size: 14px;
-  cursor: pointer;
   background-color: white;
   color: #1976d2;
-  border: none;
-}
 
-.button:hover, button:hover {
-  opacity: 0.8;
-  font-weight: normal;
-}
 
-.button:disabled, button:disabled {
-  opacity: 0.5;
-  cursor: auto;
+  span {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+  }
 }
 
 .button i.material-icons {
@@ -50,3 +40,5 @@
 .cart-item {
   padding: 12px;
 }
+
+
