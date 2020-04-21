@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Bondora.ConstructionEquipmentRental.Domain.Interfaces;
+using Bondora.ConstructionEquipmentRental.Repository;
 using Bondora.ConstructionEquipmentRental.Service.Filters;
 using Bondora.ConstructionEquipmentRental.Service.Models;
 using FluentAssertions;

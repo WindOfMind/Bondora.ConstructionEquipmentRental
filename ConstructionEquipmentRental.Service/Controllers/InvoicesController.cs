@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Bondora.ConstructionEquipmentRental.Domain.Interfaces;
 using Bondora.ConstructionEquipmentRental.Messages;
+using Bondora.ConstructionEquipmentRental.Repository;
 using Bondora.ConstructionEquipmentRental.Service.Filters;
-using Bondora.ConstructionEquipmentRental.Service.Mappers;
 using Bondora.ConstructionEquipmentRental.Service.Models;
 using Microsoft.AspNetCore.Mvc;
 using NServiceBus;
@@ -27,12 +26,12 @@ namespace Bondora.ConstructionEquipmentRental.Service.Controllers
         [ServiceFilter(typeof(EquipmentFilter))]
         public async Task<IActionResult> GetInvoiceAsync([FromBody]InvoiceRequestModel invoiceRequestModel)
         {
-            var getInvoiceCommand = new GetInvoiceMessage
+            var getInvoiceCommand = new GetInvoiceCommand
             {
                 // ClientId or userId should be retrieved from JWT token once authentication is implemented.
                 // But it's out of scope. So here is just stub.
                 ClientId = "test_client_Id",
-                OrderItems = OrderItemMapper.Map(invoiceRequestModel.OrderItems, _equipmentRepository)
+                OrderItems = invoiceRequestModel.OrderItems
             };
 
             await _endpointInstance.Send(getInvoiceCommand).ConfigureAwait(false);

@@ -30,8 +30,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ConstructionEquipmentRental.Domain\ConstructionEquipmentRental.Domain.csproj" />
-    <ProjectReference Include="..\ConstructionEquipmentRental.Equipment\ConstructionEquipmentRental.Equipment.csproj" />
     <ProjectReference Include="..\ConstructionEquipmentRental.Messages\ConstructionEquipmentRental.Messages.csproj" />
+    <ProjectReference Include="..\ConstructionEquipmentRental.Repository\ConstructionEquipmentRental.Repository.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +39,10 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mappers\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

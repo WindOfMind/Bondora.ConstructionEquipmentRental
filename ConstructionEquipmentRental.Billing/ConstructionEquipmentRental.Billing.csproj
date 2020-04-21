@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ConstructionEquipmentRental.Domain\ConstructionEquipmentRental.Domain.csproj" />
     <ProjectReference Include="..\ConstructionEquipmentRental.Messages\ConstructionEquipmentRental.Messages.csproj" />
+    <ProjectReference Include="..\ConstructionEquipmentRental.Repository\ConstructionEquipmentRental.Repository.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,6 @@
 using System;
-using Bondora.ConstructionEquipmentRental.Domain.Interfaces;
-using Bondora.ConstructionEquipmentRental.Equipment;
 using Bondora.ConstructionEquipmentRental.Messages;
+using Bondora.ConstructionEquipmentRental.Repository;
 using Bondora.ConstructionEquipmentRental.Service.Filters;
 using Bondora.ConstructionEquipmentRental.Service.Hubs;
 using Bondora.ConstructionEquipmentRental.Service.Middleware;
@@ -63,7 +62,7 @@ namespace Bondora.ConstructionEquipmentRental.Service
 
             RoutingSettings<LearningTransport> routing = transport.Routing();
             routing.RouteToEndpoint(
-                assembly: typeof(GetInvoiceMessage).Assembly,
+                assembly: typeof(GetInvoiceCommand).Assembly,
                 destination: "Bondora.ConstructionEquipmentRental.Billing");
 
             _endpoint = Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();

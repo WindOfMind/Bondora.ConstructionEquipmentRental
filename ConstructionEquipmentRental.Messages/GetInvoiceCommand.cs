@@ -4,7 +4,7 @@ using NServiceBus;
 
 namespace Bondora.ConstructionEquipmentRental.Messages
 {
-    public class GetInvoiceMessage : ICommand
+    public class GetInvoiceCommand : ICommand
     {
         public string ClientId { get; set; }
 

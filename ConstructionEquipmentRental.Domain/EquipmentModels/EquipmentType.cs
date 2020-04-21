@@ -1,4 +1,4 @@
-﻿namespace Bondora.ConstructionEquipmentRental.Domain.Models
+﻿namespace Bondora.ConstructionEquipmentRental.Domain.EquipmentModels
 {
     public enum EquipmentType
     {

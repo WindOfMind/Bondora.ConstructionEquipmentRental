@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Bondora.ConstructionEquipmentRental.Domain.Interfaces;
+using Bondora.ConstructionEquipmentRental.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bondora.ConstructionEquipmentRental.Service.Controllers

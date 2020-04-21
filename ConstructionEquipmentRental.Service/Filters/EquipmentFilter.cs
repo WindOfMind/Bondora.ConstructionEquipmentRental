@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Bondora.ConstructionEquipmentRental.Domain.Interfaces;
+using Bondora.ConstructionEquipmentRental.Repository;
 using Bondora.ConstructionEquipmentRental.Service.Models;
 using Microsoft.AspNetCore.Mvc.Filters;
 using NServiceBus.Logging;
@@ -51,7 +51,7 @@ namespace Bondora.ConstructionEquipmentRental.Service.Filters
 
             model.OrderItems = orderItems;
 
-            ActionExecutedContext executedContext = await next();
+            await next();
         }
     }
 }

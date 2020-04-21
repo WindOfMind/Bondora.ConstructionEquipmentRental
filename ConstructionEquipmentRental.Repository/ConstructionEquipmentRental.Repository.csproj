@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>Bondora.ConstructionEquipmentRental.Equipment</RootNamespace>
-    <AssemblyName>Bondora.ConstructionEquipmentRental.Equipment</AssemblyName>
+    <RootNamespace>Bondora.ConstructionEquipmentRental.Repository</RootNamespace>
+    <AssemblyName>Bondora.ConstructionEquipmentRental.Repository</AssemblyName>
     <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 

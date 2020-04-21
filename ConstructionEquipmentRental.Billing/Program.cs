@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Bondora.ConstructionEquipmentRental.Billing.Services;
-using Bondora.ConstructionEquipmentRental.Domain.Interfaces;
+using Bondora.ConstructionEquipmentRental.Repository;
 using NServiceBus;
 
 namespace Bondora.ConstructionEquipmentRental.Billing
@@ -20,13 +19,8 @@ namespace Bondora.ConstructionEquipmentRental.Billing
             endpointConfiguration.RegisterComponents(
                 configureComponents =>
                 {
-                    configureComponents.ConfigureComponent<ILoyaltyService>(() => new LoyaltyService(), DependencyLifecycle.SingleInstance);
-                    configureComponents.ConfigureComponent<IRentalFeeService>(() => new RentalFeeService(), DependencyLifecycle.SingleInstance);
-                    configureComponents.ConfigureComponent<IInvoiceService>(builder =>
-                        new InvoiceService(builder.Build<ILoyaltyService>(),
-                        builder.Build<IRentalFeeService>()),
-                        DependencyLifecycle.SingleInstance
-                    );
+                    configureComponents
+                        .ConfigureComponent<IEquipmentRepository>(() => new EquipmentRepository(), DependencyLifecycle.SingleInstance);
                 });
 
             var endpointInstance = await Endpoint.Start(endpointConfiguration)
